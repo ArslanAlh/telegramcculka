@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профессиональная химчистка мебели | Telegram-группа</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --primary-dark: #1b5e20;
+            --primary-light: #e8f5e9;
+            --accent-color: #ffab00;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8f5e9 100%);
+            text-align: center;
+            padding: 20px;
+            color: #263238;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(46, 125, 50, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 2.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #455a64;
+            margin-bottom: 30px;
+        }
+        
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(46, 125, 50, 0.3);
+        }
+        
+        .service-icon svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
+        }
+        
+        .telegram-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 16px 32px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .telegram-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(46, 125, 50, 0.5);
+        }
+        
+        .telegram-btn:active {
+            transform: translateY(0);
+        }
+        
+        .telegram-btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.15);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+        
+        .telegram-btn:hover::before {
+            opacity: 1;
+            left: 100%;
+        }
+        
+        .telegram-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            margin-right: 12px;
+        }
+        
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 35px 0;
+        }
+        
+        .benefit {
+            background: var(--primary-light);
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-size: 1rem;
+            color: var(--primary-dark);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            flex: 1 1 200px;
+            max-width: 100%;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--primary-color);
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .guarantee-badge {
+            background: var(--accent-color);
+            color: #263238;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 10px rgba(255, 171, 0, 0.3);
+        }
+        
+        @media (max-width: 650px) {
+            .container {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            
+            h1 {
+                font-size: 1.9rem;
+            }
+            
+            .benefit {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container animate__animated animate__fadeIn">
+        <div class="service-icon animate__animated animate__bounceIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1v-1h15v1c0 .55-.45 1-1 1zm1-10H5V5h14v4z"/>
+                <path d="M7 8h10v1.5H7zM10 11h4v1.5h-4z"/>
+            </svg>
+        </div>
+        <h1>Профессиональная <span class="highlight">химчистка мебели</span></h1>
+        <p>Присоединяйтесь к нашему Telegram-сообществу и получите эксклюзивные предложения, полезные советы по уходу за мебелью и специальные условия для подписчиков!</p>
+        
+        <div class="guarantee-badge animate__animated animate__pulse animate__infinite">
+            🏆 Только проверенные специалисты
+        </div>
+        
+        <div class="benefits">
+            <div class="benefit animate__animated animate__fadeInLeft">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+                Удаление сложных пятен любой давности
+            </div>
+            <div class="benefit animate__animated animate__fadeInUp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+                Использование экологичных средств
+            </div>
+            <div class="benefit animate__animated animate__fadeInRight">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+                Выезд на дом в удобное время
+            </div>
+            <div class="benefit animate__animated animate__fadeInLeft">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+                Гарантия качества работ
+            </div>
+            <div class="benefit animate__animated animate__fadeInUp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+                Скидки постоянным клиентам
+            </div>
+            <div class="benefit animate__animated animate__fadeInRight">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+                Консультации по уходу за мебелью
+            </div>
+        </div>
+        
+        <a href="https://t.me/ваша_группа" class="telegram-btn animate__animated animate__pulse animate__infinite">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.57-1.38-.93-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.03-.1.06-.22-.06-.32-.12-.1-.3-.07-.43-.04-.18.06-3.1 1.96-4.38 2.86-.42.29-.8.43-1.14.43-.38 0-.93-.14-1.43-.26-.9-.21-1.62-.33-1.56-.7.03-.2.27-.4.75-.55 2.92-1.11 4.87-1.85 6.78-2.79 1.1-.54 1.99-1.16 1.99-1.57 0-.2-.17-.43-.65-.3z"/>
+            </svg>
+            Вступить в группу
+        </a>
+        
+        <p style="margin-top: 25px; font-size: 0.95rem; color: #78909c;">
+            Уже более 1,000 довольных клиентов доверили нам свою мебель!
+        </p>
+    </div>
+</body>
+</html>
